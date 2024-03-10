@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
@@ -38,68 +39,192 @@
             Warranty
         </div>
     </div>
-    <div class="text-sm">
-        <div class="max-w-7xl mx-auto flex items-center justify-between py-6">
-            <div class="flex items-center gap-12">
-                <div>
-                    <img class="h-4" src="./img//meta.svg" alt="Logo">
+    <!-- Header -->
+    <header x-data="{menuQuest: false, menuRayBan:false, menuShop: false, menuSoport: false}">
+        <div class="text-sm">
+            <div class="max-w-7xl mx-auto flex items-center justify-between py-6">
+                <div class="flex items-center gap-12">
+                    <div>
+                        <img class="h-4" src="./img//meta.svg" alt="Logo">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div @mouseover="menuQuest = ! menuQuest" @mouseout="menuQuest = false" 
+                            class="flex items-center gap-1 hover:underline underline-offset-4 decoration-[#418af7]"
+                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuQuest === true }"
+                        >
+                            Meta Quest
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
+                                stroke="currentColor" class="w-3 h-3" :class="{'-rotate-180 transition duration-500' : menuQuest === true }">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div @mouseover="menuRayBan = true" @mouseout="menuRayBan = false"
+                            class="flex items-center gap-1 hover:underline underline-offset-4 decoration-[#418af7]"
+                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuRayBan === true }"
+                        >
+                            Ray-ban | Meta
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
+                                stroke="currentColor" class="w-3 h-3" :class="{'-rotate-180 transition duration-500': menuRayBan === true }">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div @mouseover="menuShop = true" @mouseout="menuShop = false"
+                            class="flex items-center gap-1 hover:underline underline-offset-4 decoration-[#418af7]"
+                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuShop === true }"
+                        >
+                            Apps and games
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
+                                stroke="currentColor" class="w-3 h-3" :class="{'-rotate-180 transition duration-500' : menuShop === true }">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-4">
-                    <div class="flex items-center gap-1">
-                        Meta Quest
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-3 h-3">
+                <div class="flex items-center gap-5">
+                    <div>
+                        <a href="#" title="About Meta" class="hover:underline underline-offset-4 decoration-[#418af7]">
+                            About Meta
+                        </a>
+                    </div>
+                    <div @mouseover="menuSoport = true" @mouseout="menuSoport = false"
+                        class="flex items-center gap-1">
+                        <a href="#" title="About Meta" class="hover:underline underline-offset-4 decoration-[#418af7]"
+                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuSoport === true }"
+                        >
+                            Soport
+                        </a>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
+                            stroke="currentColor" class="w-3 h-3" :class="{'-rotate-180 transition duration-500' : menuSoport === true }">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                         </svg>
+
                     </div>
-                    <div class="flex items-center gap-1">
-                        Ray-ban | Meta
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-3 h-3">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    <div class="border border-grey-200 px-4 py-2 rounded-lg flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
+
+                        <span class="text-gray-400 ">Search Meta Store</span>
                     </div>
-                    <div class="flex items-center gap-1">
-                        Apps and games
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-3 h-3">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 hover:text-[#418af7] cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                         </svg>
+
                     </div>
-                </div>
-            </div>
-            <div class="flex items-center gap-5">
-                <div>
-                    <a href="#" title="About Meta" class="hover:underline underline-offset-4 decoration-[#418af7]">
-                        About Meta
-                    </a>
-                </div>
-                <div class="flex items-center gap-1">
-                    Support
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-3 h-3">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                    </svg>
-                      
-                </div>
-                <div class="border border-grey-200 px-4 py-2 rounded-lg flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                      </svg>
-                      
-                    <span class="text-gray-400 ">Search Meta Store</span>
-                </div>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:text-[#418af7] cursor-pointer">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                      </svg>
-                      
-                </div>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:text-[#418af7] cursor-pointer">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                      </svg>
-                      
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 hover:text-[#418af7] cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- menu -->
+        <div x-show="menuQuest" class="border-t border-grey-200">
+            <div class="max-w-6xl mx-auto flex gap-16 text-xl py-16 px-14">
+                <div class="w-60">
+                    <ul class="space-y-4">
+                        <li class="hover:underline underline-offset-4 decoration-1">Meta Quest overview</li>
+                        <li class="flex items-center gap-2">
+                            <span class="hover:underline underline-offset-4 decoration-1">Meta Quest 3</span>
+                            <span class="py-0.5 px-2 bg-[#f5ebfa] font-medium text-xs text-[#a121ce] rounded-md">New</span></li>
+                        <li class="flex items-center gap-2">
+                            <span class="hover:underline underline-offset-4 decoration-1">Meta Quest 2</span>
+                            <span class="py-0.5 px-2 bg-[#f5ebfa] font-medium text-xs text-[#a121ce] rounded-md">Discount</span></li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Meta Quest Pro</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Compare devices</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li class="hover:underline underline-offset-4 decoration-1">Accessories</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div x-show="menuRayBan" class="border-t border-grey-200">
+            <div class="max-w-6xl mx-auto flex gap-16 text-xl py-16 px-14">
+                <div class="w-60">
+                    <ul class="space-y-4">
+                        <li class="hover:underline underline-offset-4 decoration-1">Ray-Ban | Meta overview</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Shop all</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Wayfarer</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Headliner</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div x-show="menuShop" class="border-t border-grey-200">
+            <div class="max-w-6xl mx-auto flex gap-16 text-xl py-16 px-14">
+                <div class="w-60">
+                    <ul class="space-y-4">
+                        <li class="hover:underline underline-offset-4 decoration-1">Shop all</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Social</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Gaming</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Fitness</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-4">
+                        <li class="hover:underline underline-offset-4 decoration-1">Entertainment</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Productivity</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Mixed reality</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Meta Quest+</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div x-show="menuSoport" class="border-t border-grey-200">
+            <div class="max-w-6xl mx-auto flex gap-24 text-xl py-16 px-14 justify-end">
+                <div class="w-50">
+                    <ul class="space-y-4">
+                        <p class="font-bold text-sm text-[#344854]">Store and Device Help Centres</p>
+                        <li class="hover:underline underline-offset-4 decoration-1">Find order</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Meta Quest and Quest Pro</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Meta Portal</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Smart glasses</li>
+                    </ul>
+                </div>
+                <div class="w-50">
+                    <ul class="space-y-4">
+                        <p class="font-bold text-sm text-[#344854]">Meta Help Centre</p>
+                        <li class="hover:underline underline-offset-4 decoration-1">Accounts Centre</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Meta Pay</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Policies</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Connected experiences</li>
+                    </ul>
+                </div>
+                <div class="w-50">
+                    <ul class="space-y-4">
+                        <p class="font-bold text-sm text-[#344854]">App Help Centres</p>
+                        <li class="hover:underline underline-offset-4 decoration-1">Meta Horizon</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Facebook</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Messenger</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Instagram</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">WhatsApp</li>
+                        <li class="hover:underline underline-offset-4 decoration-1">Workplace</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end menu -->
+    </header>
+    <!-- end header -->
+
 
 </body>
 
