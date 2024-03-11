@@ -48,33 +48,33 @@
                         <img class="h-4" src="./img//meta.svg" alt="Logo">
                     </div>
                     <div class="flex items-center gap-4">
-                        <div @mouseover="menuQuest = ! menuQuest" @mouseout="menuQuest = false" 
+                        <div @mouseover="menuQuest = ! menuQuest" @mouseout="menuQuest = false"
                             class="flex items-center gap-1 hover:underline underline-offset-4 decoration-[#418af7]"
-                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuQuest === true }"
-                        >
+                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuQuest === true }">
                             Meta Quest
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
-                                stroke="currentColor" class="w-3 h-3" :class="{'-rotate-180 transition duration-500' : menuQuest === true }">
+                                stroke="currentColor" class="w-3 h-3"
+                                :class="{'-rotate-180 transition duration-500' : menuQuest === true }">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                             </svg>
                         </div>
                         <div @mouseover="menuRayBan = true" @mouseout="menuRayBan = false"
                             class="flex items-center gap-1 hover:underline underline-offset-4 decoration-[#418af7]"
-                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuRayBan === true }"
-                        >
+                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuRayBan === true }">
                             Ray-ban | Meta
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
-                                stroke="currentColor" class="w-3 h-3" :class="{'-rotate-180 transition duration-500': menuRayBan === true }">
+                                stroke="currentColor" class="w-3 h-3"
+                                :class="{'-rotate-180 transition duration-500': menuRayBan === true }">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                             </svg>
                         </div>
                         <div @mouseover="menuShop = true" @mouseout="menuShop = false"
                             class="flex items-center gap-1 hover:underline underline-offset-4 decoration-[#418af7]"
-                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuShop === true }"
-                        >
+                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuShop === true }">
                             Apps and games
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
-                                stroke="currentColor" class="w-3 h-3" :class="{'-rotate-180 transition duration-500' : menuShop === true }">
+                                stroke="currentColor" class="w-3 h-3"
+                                :class="{'-rotate-180 transition duration-500' : menuShop === true }">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                             </svg>
                         </div>
@@ -86,15 +86,14 @@
                             About Meta
                         </a>
                     </div>
-                    <div @mouseover="menuSoport = true" @mouseout="menuSoport = false"
-                        class="flex items-center gap-1">
+                    <div @mouseover="menuSoport = true" @mouseout="menuSoport = false" class="flex items-center gap-1">
                         <a href="#" title="About Meta" class="hover:underline underline-offset-4 decoration-[#418af7]"
-                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuSoport === true }"
-                        >
+                            :class="{ 'underline underline-offset-4 decoration-[#418af7]' : menuSoport === true }">
                             Soport
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
-                            stroke="currentColor" class="w-3 h-3" :class="{'-rotate-180 transition duration-500' : menuSoport === true }">
+                            stroke="currentColor" class="w-3 h-3"
+                            :class="{'-rotate-180 transition duration-500' : menuSoport === true }">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                         </svg>
 
@@ -136,10 +135,14 @@
                         <li class="hover:underline underline-offset-4 decoration-1">Meta Quest overview</li>
                         <li class="flex items-center gap-2">
                             <span class="hover:underline underline-offset-4 decoration-1">Meta Quest 3</span>
-                            <span class="py-0.5 px-2 bg-[#f5ebfa] font-medium text-xs text-[#a121ce] rounded-md">New</span></li>
+                            <span
+                                class="py-0.5 px-2 bg-[#f5ebfa] font-medium text-xs text-[#a121ce] rounded-md">New</span>
+                        </li>
                         <li class="flex items-center gap-2">
                             <span class="hover:underline underline-offset-4 decoration-1">Meta Quest 2</span>
-                            <span class="py-0.5 px-2 bg-[#f5ebfa] font-medium text-xs text-[#a121ce] rounded-md">Discount</span></li>
+                            <span
+                                class="py-0.5 px-2 bg-[#f5ebfa] font-medium text-xs text-[#a121ce] rounded-md">Discount</span>
+                        </li>
                         <li class="hover:underline underline-offset-4 decoration-1">Meta Quest Pro</li>
                         <li class="hover:underline underline-offset-4 decoration-1">Compare devices</li>
                     </ul>
@@ -224,6 +227,130 @@
         <!-- end menu -->
     </header>
     <!-- end header -->
+    <div class="h-[900px]"></div>
+    <!-- footer -->
+    <hr class="border border-grey-900">
+    <footer>
+            <div class="flex justify-between w-full px-12 mx-auto mt-12">
+                <div class="text-lg">
+                    <div class="mb-10">
+                        <img class="h-5" src="./img//meta.svg" alt="Logo">
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <img src="https://scontent.fmad8-1.fna.fbcdn.net/v/t39.2365-6/425860105_925920989121941_6933048753023841367_n.svg?_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=aa6a2f&amp;_nc_ohc=2_O2GzE4d0kAX9fA5Np&amp;_nc_ht=scontent.fmad8-1.fna&amp;oh=00_AfDFVkJgH_Mi7lboIec_K4qUXn6Zc2pU_JjO7EGE-q8IZw&amp;oe=65F3C022" alt="Facebook" class="x2e0w50 hover:saturate-[1000%] hover:cursor-pointer" decoding="auto" loading="lazy">
+                        
+                        <img src="https://scontent.fmad8-1.fna.fbcdn.net/v/t39.2365-6/426111639_1769160196937749_1255414493924977933_n.svg?_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=aa6a2f&amp;_nc_ohc=AYXH2BXUBaMAX-hOzYB&amp;_nc_oc=AQlfa0pfz4crRNLbou9XqYyk_VETvcJP8c0cz4XRICQRTaL2pRSEogjYHV_7ODltbHk&amp;_nc_ht=scontent.fmad8-1.fna&amp;oh=00_AfAz_gkJo-NHHmwTJEuzxZmtM5fADWxIXuzTy91e5nbT9w&amp;oe=65F46379" alt="Threads" class="x2e0w50 hover:saturate-[1000%] hover:cursor-pointer" decoding="auto" loading="lazy">
+                        
+                        <img src="https://scontent.fmad8-1.fna.fbcdn.net/v/t39.2365-6/425804778_757649995874129_6917476492193301523_n.svg?_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=aa6a2f&amp;_nc_ohc=Gxb5oNSTyicAX-awsFO&amp;_nc_ht=scontent.fmad8-1.fna&amp;oh=00_AfASHdgkCRBD2XgFsgiFX3we3l3GvarhDb4JoLpd0exMxg&amp;oe=65F3AA38" alt="Instagram" class="x2e0w50 hover:saturate-[1000%] hover:cursor-pointer" decoding="auto" loading="lazy">
+
+
+                        <img src="https://scontent.fmad8-1.fna.fbcdn.net/v/t39.2365-6/426747931_385023204117867_5811151062540225287_n.svg?_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=aa6a2f&amp;_nc_ohc=xgOTKbbxUlMAX_QZ0k8&amp;_nc_ht=scontent.fmad8-1.fna&amp;oh=00_AfBCzkgkzN-_6wF4p3FrgY9GAKl9oMLHA2yndSBw2kQtuw&amp;oe=65F2E7AA" alt="X" class="x2e0w50 hover:saturate-[1000%] hover:cursor-pointer" decoding="auto" loading="lazy">
+
+                        <img src="https://scontent.fmad8-1.fna.fbcdn.net/v/t39.2365-6/425519002_724756916408357_7491658959807896355_n.svg?_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=aa6a2f&amp;_nc_ohc=quhHBHzVlXQAX-b9ZzM&amp;_nc_oc=AQnah_Ziv4G0D51w8x-8wozMFhVh4cELUlUorRpZRyaDbUgTiOFRArPBvw4dPyO6T1A&amp;_nc_ht=scontent.fmad8-1.fna&amp;oh=00_AfCR23d3HYzcL0PZPztZVA7Mz_-RzWdLzSzGtrh9LziprQ&amp;oe=65F38B1F" alt="YouTube" class="x2e0w50 hover:saturate-[1000%] hover:cursor-pointer" decoding="auto" loading="lazy">
+                    </div>
+                </div>
+                <div class="flex justify-end text-sm text-[#4A4A4A]">
+                    <div>
+                        <div class="px-14">
+                            <div class="mb-8">
+                                <ul>
+                                    <li class="font-semibold text-[#1c2b33]">Site terms and policies</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Community Standards</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Privacy Policy</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Terms</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Cookie policy</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Cookie settings</li>
+                                </ul>
+                            </div>
+                            <div class="mb-8">
+                                <ul>
+                                    <li class="font-semibold text-[#1c2b33]">Virtual reality</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Shop Meta Quest</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Refurbished Meta Quest 2</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">VR for Good</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Forums</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Referrals</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Blog</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Creators</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Download SDKs</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Developers</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Made for Meta partner programme</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Safety information for parents and pre-teens</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Meta Quest health and safety information</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Meta Quest safety centre</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Meta for Work</li>
+                                    <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Meta avatars</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-14">
+                        <div class="mb-8">
+                            <ul>
+                                <li class="font-semibold text-[#1c2b33]">Smart glasses</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Shop Ray-Ban Meta smart glasses</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Ray-Ban Stories</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Privacy information</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Supported countries</li>
+                            </ul>
+                        </div>
+                        <div class="mb-8">
+                            <ul>
+                                <li class="font-semibold text-[#1c2b33]">Support and legal</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Meta Help Centre</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Order status</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Returns</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Find a product demo</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Legal</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Terms of sale</li>
+                            </ul>
+                        </div>
+                        <div class="mb-8">
+                            <ul>
+                                <li class="font-semibold text-[#1c2b33]">Our actions</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Data and privacy</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Safety and expression</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Responsible business practices</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Elections</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">COVID-19 response</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Regulations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-14">
+                        <div class="mb-8">
+                            <ul>
+                                <li class="font-semibold text-[#1c2b33]">About us</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">About Meta</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Media gallery</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Brand resources</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">For investors</li>
+                            </ul>
+                        </div>
+                        <div class="mb-8">
+                            <ul>
+                                <li class="font-semibold text-[#1c2b33]">Our community</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Support SMB</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Giving together</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Social impact</li>
+                            </ul>
+                        </div>
+                        <div class="mb-8">
+                            <ul>
+                                <li class="font-semibold text-[#1c2b33]">App support</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Facebook Help Center</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Messenger Help Center</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Instagram Help Center</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">WhatsApp Help Center</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Workplace Help Center</li>
+                                <li class="hover:underline underline-offset-1 decoration-1 hover:cursor-pointer">Meta Verified</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+    </footer>
 
 
 </body>
